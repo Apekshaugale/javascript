@@ -59,29 +59,16 @@
 
 // [ ] 15. Check whether three sides can form a valid triangle.
 
-let a = 3;
-let b = 4;
-let c = 5;
+// let a = 3;
+// let b = 4;
+// let c = 5;
 
-if (a + b > c && a + c > b && b + c > a) {
-    console.log("Valid triangle");
-}
-else {
-    console.log("Invalid triangle");
-}
-
-
-// [ ] 16. Classify a triangle as equilateral, isosceles, or scalene.
-
-// [ ] 17. Check whether a person is eligible for a driving licence.
-
-// [ ] 18. Build a simple calculator using if-else.
-
-// [ ] 19. Build a calculator using switch.
-
-// [ ] 20. Print the day name for a number from 1 to 7 using switch.
-
-// [ ] 21. Print the month name for a number from 1 to 12.
+// if (a + b > c && a + c > b && b + c > a) {
+//     console.log("Valid triangle");
+// }
+// else {
+//     console.log("Invalid triangle");
+// }
 
 // [ ] 22. Check whether a number is between 10 and 50, inclusive.
 

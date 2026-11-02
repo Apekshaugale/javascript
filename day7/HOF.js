@@ -409,24 +409,8 @@
 //     }
        
 // }
-// let add=getOperation("+");
-// console.log(add(10,5));
 
-// let subtract=getOperation("-");
-// console.log(add(10,5));
 
-let getOperation = (operator) => {
-    if (operator === "+") {
-        return (a, b) => a + b;
-    }
-    else if (operator === "-") {
-        return (a, b) => a - b;
-    }
-};
-
-let add = getOperation("+");
-
-console.log(add(10, 5));
 // Task 18. Create a multiplier function
 // What to do:
 // 1. Create createMultiplier(n).
@@ -437,6 +421,12 @@ console.log(add(10, 5));
 // Expected output for createMultiplier(4)(5):
 // 20
 
+// let createMultiplier=(n)=>{
+//   return (num)=>{
+//         return num*n}
+  
+// }
+// console.log(createMultiplier(4,5))
 
 // Task 19. Create a power function
 // What to do:
@@ -447,7 +437,18 @@ console.log(add(10, 5));
 // 5. Test with a square function and a cube function.
 // Expected output:
 // 16
-// 8
+// // 8
+// let createPower=(power)=>{
+//     return (Number)=>{
+//         return Number**power
+//     }
+    
+// }
+// let squ=(Number)=>{
+//     return Number **2
+// }
+// console.log(createPower(2,squ))
+
 
 
 // Task 20. Repeat an action a specified number of times
@@ -462,6 +463,17 @@ console.log(add(10, 5));
 // JavaScript
 // JavaScript
 // JavaScript
+// let repeatAction=(n, action)=>{
+//     for(i=1;i<=n;i++) {
+//      action();
+// }
+// };
+// let num=()=>{
+//      console.log("JavaScript");
+    
+// };
+// repeatAction(4,num);
+
 
 
 // Task 21. Apply different operations to two numbers
@@ -475,6 +487,20 @@ console.log(add(10, 5));
 // 15
 // 50
 // 5
+// let applyOperation=(a, b, operation)=>{
+//      operation(a,b)
+// }
+// let addition=(a,b)=>{
+//     console.log(a+b);
+// }
+// let multiplication=(a,b)=>{console.log(a*b);
+ 
+// }
+// let subtraction=(a,b)=>{console.log(a-b);
+// }
+// applyOperation(10,5,addition)
+// applyOperation(10,5,multiplication)
+// applyOperation(10,5,subtraction)
 
 
 // Task 22. Apply a function twice
@@ -487,7 +513,11 @@ console.log(add(10, 5));
 // 6. Test applyTwice(2, addThree).
 // Expected output:
 // 8
+// let applyTwice=(n, fn)=>{
+    
+// }
 
+// applyTwice(n, fn)
 
 // Task 23. Return an even or odd checker
 // What to do:
@@ -499,7 +529,18 @@ console.log(add(10, 5));
 // Expected output:
 // true
 // true
+// let getChecker=(type)=>{
+//     if (type=="even"){ return(num)=>{
+//         return num%2===0;
+//     }
 
+//     }
+//     else  if (type=="even"){ return(num)=>{
+//         return num%2===0;
+//     }
+
+//     }
+// }
 
 // Task 24. Create a counter using a returned function
 // What to do:
@@ -525,7 +566,15 @@ console.log(add(10, 5));
 // 5. Pass an arrow function that multiplies the sum by 2.
 // Expected output for inputs 10 and 5:
 // 30
+// let calculateAndTransform=(a, b, callback)=>{
+//  Calculate= a+b
+//  callback(Calculate)
 
+// };
+// let result=(Calculate)=>{
+//     console.log(Calculate*2)
+// }
+// calculateAndTransform(10, 5, result)
 
 // Task 26. Execute one of two callbacks based on a condition
 // What to do:
@@ -536,6 +585,22 @@ console.log(add(10, 5));
 // 5. Test with a positive number, a negative number, and zero.
 // Expected output for a negative number:
 // Number is not positive
+// let runConditionally=(n, success, failure)=>{
+//     if(n>0){
+//         success()
+//     }
+//     else{
+//         failure()
+//     }
+// }
+// let success=()=>{
+// console.log("NUmber is positive");
+
+// }
+// let failure=()=>{
+// console.log("Number is not positive")
+// }
+// runConditionally(-5,success,failure)
 
 
 // Task 27. Compose two functions
@@ -548,6 +613,12 @@ console.log(add(10, 5));
 // 6. Test with a function that doubles a number and another that adds 5.
 // Expected output for input 10:
 // 25
+// let composeTwo=(first, second)=>{
+//     return (num)=>{}
+// }
+
+// composeTwo(first, second)
+
 
 
 // Task 28. Validate before calculating
@@ -561,6 +632,11 @@ console.log(add(10, 5));
 // Expected results:
 // validateAndCalculate(10, 5, validate, add);  // 15
 // validateAndCalculate(-10, 5, validate, add); // Error message
+// let validateAndCalculate=(a, b, validate, calculate)=>{
+//     validate(a,b)
+// }
+
+
 
 
 // Task 29. Return a calculator that accepts a callback
@@ -574,6 +650,14 @@ console.log(add(10, 5));
 // 7. Pass a callback that multiplies the sum by 2.
 // Expected output:
 // 30
+// let createCalculator=(
+    
+// )=>{
+//     return (a, b, callback) => {
+//         let sum = a + b;
+//         return callback(sum);
+//     };
+// };
 
 
 // Task 30. Create a three-step function pipeline
@@ -585,3 +669,35 @@ console.log(add(10, 5));
 // 5. Return the final result.
 // 6. Test with functions that add 2, multiply by 3, and subtract 4.
 // Expected output for input 5:
+// let pipeline=(n, first, second, third)=>{
+//     return third(second(first(n)))
+// }
+// let first=(n)=>{
+//      return n+2
+  
+// }
+// let second=(n)=>{
+//     return c*3
+  
+// }
+// let third=(n)=>{
+//     return d-4
+// }
+// console.log(pipeline(5, first, second, third))
+
+
+
+let checkNumber=(n,callback)=>{
+    return callback(n)
+}
+console.log(checkNumber(5,(n)=>
+    {
+    if (n>0){
+        return "n is positive"
+    }
+    else if (n<0){
+        return "n is negative"
+    }
+}
+))
+

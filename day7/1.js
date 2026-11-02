@@ -55,7 +55,8 @@
 // };
 //  console.log(calculate(4, 8, "+"));
 //  console.log(calculate(4, 8, "-"));
-// console.log(calculate(4, 8, "*"));
+// console
+// .log(calculate(4, 8, "*"));
 // console.log(calculate(4, 0, "/"));
 
 // [ ] 
@@ -98,7 +99,7 @@
 // 19. Create a function `execute` that accepts a callback function and calls it. Pass a regular function as the callback.
 // function execute(callback){
 //     console.log("hello") ; 
-//    //calling callback and passing regular function as a callback
+// // calling callback and passing regular function as a callback
 //    callback();
 
 // function demo(){
@@ -112,19 +113,17 @@
 
 
 
-function fetchData(callback) {
-  console.log("Fetching data...");
-  setTimeout(() => {
-    callback("Data fetched successfully!");
-  }, 2000);
-}
-fetchData((message) => console.log(message)); 
+// function fetchData(callback) {
+//   console.log("Fetching data...");
+//   setTimeout(() => {
+//     callback("Data fetched successfully!");
+//   }, 2000);
+// }
+// fetchData((message) => console.log(message)); 
 
 
 // [ ] 
 // 20. Write a function `calculate(a, b, callback)` that performs addition and passes the result to the callback. Example: `calculate(10, 5, result => console.log(result))`.
-
-
 
 // [ ] 
 // 21. Write a function `checkNumber(n, callback)` that checks whether n is positive or negative and passes the result to a callback for printing.
