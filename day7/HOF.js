@@ -654,11 +654,12 @@
     
 // )=>{
 //     return (a, b, callback) => {
-//         let sum = a + b;
+//          sum = a + b;
 //         return callback(sum);
 //     };
 // };
-
+// let inner = createCalculator();  // #outer function called
+// inner(10, 5, (sum) => sum * 2);  // #inner function called with a callback
 
 // Task 30. Create a three-step function pipeline
 // What to do:
