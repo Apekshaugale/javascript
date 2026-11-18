@@ -140,6 +140,36 @@
 // 3. Add all the squares.
 // Expected output: 55
 
-let arr= [1, 2, 3, 4, 5]
-let sum=arr.reduce((acc,ele)=>{return acc+ele*ele},0)
-console.log(sum);
+// let arr= [1, 2, 3, 4, 5]
+// let sum=arr.reduce((acc,ele)=>{return acc+ele*ele},0)
+// console.log(sum);
+
+
+// let arr=[10,20,30,40,50]
+// let  customReduce=(cb)=>{//in cb we customreduce
+//     let acc=arr[0] ;
+//     for(let i=0;i<arr.length;i++){
+//        acc=cb(acc,arr[i])
+//     }
+// return acc
+// }
+// let grt=customReduce((acc,ele)=>{
+//     if (acc > ele) {
+//     return acc;
+//   } else {
+//     return ele;
+//   }
+
+// })
+// console.log(grt);
+
+let A=[-10,20,-30,40,-50]
+let posforEach=(cb)=>{
+    for(let i=0;i<A.length;i++){
+        if (A[i]>0){
+            cb(A[i])
+        }
+    }
+}
+posforEach((ele)=>{console.log(ele);
+})
