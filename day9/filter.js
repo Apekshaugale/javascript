@@ -127,7 +127,6 @@
 // Expected output: [10, 20, 30]
 let array= [10, 15, 20, 25, 30, 35]
 function checkeven(num){
-
         if 
         (num%2===0){
             return true
@@ -135,8 +134,6 @@ function checkeven(num){
         else{
             return false
         }
-
-    
 }
 let result=array.filter(checkeven)
 console.log(result);
