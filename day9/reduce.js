@@ -163,13 +163,33 @@
 // })
 // console.log(grt);
 
-let A=[-10,20,-30,40,-50]
-let posforEach=(cb)=>{
-    for(let i=0;i<A.length;i++){
-        if (A[i]>0){
-            cb(A[i])
-        }
-    }
-}
-posforEach((ele)=>{console.log(ele);
-})
+// let A=[-10,20,-30,40,-50]
+// let posforEach=(cb)=>{
+//     for(let i=0;i<A.length;i++){
+//         if (A[i]>0){
+//             cb(A[i])
+//         }
+//     }
+// }
+// posforEach((ele)=>{console.log(ele);
+// })
+
+// let arr=[1,3,2,4,5]
+// let avg=arr.reduce((acc,ele)=>{ return acc+ele/arr.length})
+// console.log(avg);
+
+
+// let arr=[2,3,4,5,6]
+// let maxi=arr.reduce((acc,val)=>{ if(acc>val){return acc}
+// return val})
+// console.log(maxi);
+
+let arr=[-10,-2,0,2,10]
+// let res=arr.filter((ele)=>{return ele>-2})
+// console.log(res);
+
+let res=arr.filter((ele)=>{return })
+
+mult by index filter even sum reduce 
+
+

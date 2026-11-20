@@ -436,3 +436,26 @@ let newArr = customMap((ele, ind) => {
   return ele * ind;
 });
 console.log(newArr);
+
+
+
+
+let arr =;
+
+let customReduce = (cb) => {
+  let acc = arr[0]; // Start with the first element
+  for (let i = 1; i < arr.length; i++) {
+    acc = cb(acc, arr[i]); // Pass the element value (arr[i]), not the index (i)
+  }
+  return acc;
+};
+
+let grt = customReduce((acc, ele) => {
+  if (acc > ele) {
+    return acc;
+  } else {
+    return ele;
+  }
+});
+
+console.log(grt); // Output: 50
