@@ -1,0 +1,633 @@
+2. Character access methods
+These methods are used to access individual characters from a string.
+1. at()
+Purpose: Returns the character at a specified index.
+
+Syntax:
+string.at(index);
+
+
+Parameters:
+- index: Position of the character.
+- Positive index starts from the beginning.
+- Negative index starts from the end.
+Return value:
+- Returns a string containing the character.
+- Returns undefined if the index is outside the valid range.
+Example:
+let str = "JavaScript";
+
+console.log(str.at(0));
+console.log(str.at(4));
+console.log(str.at(-1));
+console.log(str.at(-2));
+
+
+Output:
+J
+S
+t
+p
+
+
+Important: Negative indexing is supported by at().
+2. charAt()
+Purpose: Returns the character at a specified index.
+
+Syntax:
+string.charAt(index);
+
+
+Parameter:
+
+- index: Position of the character.
+
+Return value:
+- Returns the character as a string.
+- Returns an empty string "" if the index is invalid.
+Example:
+let str = "JavaScript";
+
+console.log(str.charAt(0));
+console.log(str.charAt(4));
+console.log(str.charAt(9));
+console.log(str.charAt(-1));
+
+
+Output:
+J
+S
+t
+
+
+Important difference between at() and charAt():
+at()	                                charAt()
+Supports negative indexes	            Does not support negative indexes
+Invalid index returns undefined	       Invalid index returns ""
+str.at(-1) returns last character	   str.charAt(-1) returns empty string
+
+3. charCodeAt()
+Purpose: Returns the UTF-16 code unit of the character at a specified index.
+
+In simple words, it returns a numeric character code instead of the character itself.
+
+Syntax:
+string.charCodeAt(index);
+
+
+Parameter:
+
+- index: Position of the character.
+
+Return value:
+- Returns a number representing the UTF-16 code unit.
+- Returns NaN if the index is invalid.
+Example:
+let str = "ABC";
+
+console.log(str.charCodeAt(0));
+console.log(str.charCodeAt(1));
+console.log(str.charCodeAt(2));
+
+
+Output:
+65
+66
+67
+
+
+Some common character codes:
+Character	Code
+A	65
+B	66
+C	67
+a	97
+b	98
+c	99
+0	48
+1	49
+
+Example with a space:
+let str = "A B";
+
+console.log(str.charCodeAt(1));
+
+
+Output:
+32
+
+
+The space character also has a character code.
+
+3. String combining and searching methods
+4. concat()
+Purpose: Combines two or more strings and returns a new combined string.
+
+Syntax:
+string.concat(string2, string3, ...);
+
+
+Parameters:
+
+- One or more strings that you want to combine.
+
+Return value:
+- Returns a new combined string.
+- Does not modify the original string.
+Example:
+let str1 = "Hello";
+let str2 = "World";
+
+let result = str1.concat(" ", str2);
+
+console.log(result);
+
+
+Output:
+Hello World
+
+
+You can also combine multiple strings:
+let a = "I";
+let b = "Love";
+let c = "JavaScript";
+
+console.log(a.concat(" ", b, " ", c));
+
+
+Output:
+I Love JavaScript
+Important: concat() does not automatically insert spaces between strings. You must provide them.
+#
+
+!5. includes()
+
+Purpose: Checks whether a particular character or substring exists inside a string.
+
+Syntax:
+string.includes(searchString, position);
+
+
+Parameters:
+- searchString: Text you want to search for.
+- position: Optional starting position for searching. Default is 0.
+Return value:
+- true if the text exists.
+- false if the text does not exist.
+Example:
+let str = "I am learning JavaScript";
+
+console.log(str.includes("learning"));
+console.log(str.includes("Java"));
+console.log(str.includes("Python"));
+
+
+Output:
+true
+true
+false
+
+
+Example with position:
+let str = "JavaScript Programming";
+
+console.log(str.includes("Java", 0));
+console.log(str.includes("Java", 5));
+
+
+Output:
+true
+false
+
+
+Important points:
+- includes() is case-sensitive.
+- "Java" and "java" are different.
+- It returns a Boolean value, not an index.
+6. indexOf()
+Purpose: Finds the first occurrence of a character or substring in a string.
+
+Syntax:
+string.indexOf(searchValue, fromIndex);
+
+
+Parameters:
+- searchValue: Character or word to search for.
+- fromIndex: Optional position from which searching begins. Default is 0.
+Return value:
+- Returns the index of the first matching occurrence.
+- Returns -1 if the value is not found.
+Example:
+let str = "JavaScript Programming";
+
+console.log(str.indexOf("a"));
+console.log(str.indexOf("Script"));
+console.log(str.indexOf("Python"));
+
+
+Output:
+1
+4
+-1
+
+
+Example with fromIndex:
+let str = "banana";
+
+console.log(str.indexOf("a"));
+console.log(str.indexOf("a", 2));
+
+
+Output:
+1
+3
+
+
+The second search begins at index 2.
+7. lastIndexOf()
+Purpose: Finds the last occurrence of a character or substring in a string.
+
+Syntax:
+string.lastIndexOf(searchValue, fromIndex);
+
+
+Parameters:
+- searchValue: Character or word to search for.
+- fromIndex: Optional position from which the backward search begins. Default is the end of the string.
+Return value:
+- Returns the index of the last matching occurrence.
+- Returns -1 if the value is not found.
+Example:
+let str = "banana";
+
+console.log(str.lastIndexOf("a"));
+console.log(str.lastIndexOf("n"));
+console.log(str.lastIndexOf("z"));
+
+
+Output:
+5
+4
+-1
+
+
+Difference between indexOf() and lastIndexOf()
+let str = "banana";
+
+console.log(str.indexOf("a"));
+console.log(str.lastIndexOf("a"));
+
+
+Output:
+1
+5
+
+
+indexOf()	lastIndexOf()
+Searches from the beginning	Searches backward from the end by default
+Returns first occurrence	Returns last occurrence
+Returns -1 if absent	Returns -1 if absent
+
+
+4. String padding methods
+Padding means adding extra characters to a string until it reaches a specified length.
+8. padStart()
+Purpose: Adds characters at the beginning of a string until it reaches the specified length.
+
+Syntax:
+string.padStart(targetLength, padString);
+
+
+Parameters:
+- targetLength: Desired final string length.
+- padString: Optional characters to add. Default is a space.
+Return value:
+- Returns a new padded string.
+- Does not modify the original string.
+Example:
+let str = "25";
+
+let result = str.padStart(5, "0");
+
+console.log(result);
+
+
+Output:
+00025
+
+
+Explanation:
+- Original length = 2.
+- Target length = 5.
+- Three zeros are added at the beginning.
+Another example:
+let str = "Hello";
+
+console.log(str.padStart(10, "*"));
+
+
+Output:
+*****Hello
+
+
+9. padEnd()
+Purpose: Adds characters at the end of a string until it reaches the specified length.
+
+Syntax:
+string.padEnd(targetLength, padString);
+
+
+Parameters:
+- targetLength: Desired final string length.
+- padString: Optional characters to add. Default is a space.
+Return value:
+- Returns a new padded string.
+- Does not modify the original string.
+Example:
+let str = "25";
+
+let result = str.padEnd(5, "0");
+
+console.log(result);
+
+
+Output:
+25000
+
+
+Another example:
+let str = "Hello";
+
+console.log(str.padEnd(10, "*"));
+
+
+Output:
+Hello*****
+
+
+Difference between padStart() and padEnd()
+padStart()	padEnd()
+Adds characters at the beginning	Adds characters at the end
+"25".padStart(5,"0")	"25".padEnd(5,"0")
+"00025"	"25000"
+
+Important: If the original string is already equal to or longer than the target length, no padding is added.
+
+5. String repetition method
+10. repeat()
+Purpose: Repeats a string a specified number of times.
+
+Syntax:
+string.repeat(count);
+
+
+Parameter:
+
+- count: Number of times to repeat the string.
+
+Return value:
+- Returns a new repeated string.
+- Does not modify the original string.
+Example:
+let str = "Hello ";
+
+console.log(str.repeat(3));
+
+
+Output:
+Hello Hello Hello 
+
+
+Another example:
+let str = "*";
+
+console.log(str.repeat(5));
+
+
+Output:
+*****
+
+
+Important points:
+- repeat(0) returns an empty string.
+- repeat(1) returns the original string's content.
+- Negative numbers cause a RangeError.
+- Fractional positive counts are rounded down to an integer.
+
+6. String checking methods
+11. startsWith()
+Purpose: Checks whether a string starts with a particular character or substring.
+
+Syntax:
+string.startsWith(searchString, position);
+
+
+Parameters:
+- searchString: Text you want to check.
+- position: Optional position from which to check. Default is 0.
+Return value:
+- Returns true if the string starts with the given text at the specified position.
+- Otherwise, returns false.
+Example:
+let str = "JavaScript Programming";
+
+console.log(str.startsWith("Java"));
+console.log(str.startsWith("Script"));
+
+
+Output:
+true
+false
+
+
+Example with position:
+let str = "Hello JavaScript";
+
+console.log(str.startsWith("Java", 6));
+
+
+Output:
+true
+
+
+12. endsWith()
+Purpose: Checks whether a string ends with a particular character or substring.
+
+Syntax:
+string.endsWith(searchString, endPosition);
+
+
+Parameters:
+- searchString: Text you want to check.
+- endPosition: Optional position treated as the end of the string. Default is the full string length.
+Return value:
+- Returns true if the string ends with the specified text.
+- Otherwise, returns false.
+Example:
+let str = "JavaScript";
+
+console.log(str.endsWith("Script"));
+console.log(str.endsWith("Java"));
+
+
+Output:
+true
+false
+
+
+Example with endPosition:
+let str = "JavaScript";
+
+console.log(str.endsWith("Java", 4));
+
+
+Output:
+true
+
+
+This checks the portion of the string ending at position 4.
+Difference between startsWith() and endsWith()
+startsWith()	endsWith()
+Checks the beginning	Checks the ending
+Default position is 0	Default end position is string length
+Returns Boolean	Returns Boolean
+
+
+7. Case conversion methods
+13. toUpperCase()
+Purpose: Converts all lowercase letters in a string into uppercase letters.
+
+Syntax:
+string.toUpperCase();
+
+
+Parameters: None.
+
+Return value:
+- Returns a new uppercase string.
+- Does not modify the original string.
+Example:
+let str = "hello javascript";
+
+let result = str.toUpperCase();
+
+console.log(result);
+
+
+Output:
+HELLO JAVASCRIPT
+
+
+14. toLowerCase()
+Purpose: Converts all uppercase letters in a string into lowercase letters.
+
+Syntax:
+string.toLowerCase();
+
+
+Parameters: None.
+
+Return value:
+- Returns a new lowercase string.
+- Does not modify the original string.
+Example:
+let str = "HELLO JAVASCRIPT";
+
+let result = str.toLowerCase();
+
+console.log(result);
+
+
+Output:
+hello javascript
+
+
+Difference between both methods
+toUpperCase()	toLowerCase()
+Converts to uppercase	Converts to lowercase
+"hello" → "HELLO"	"HELLO" → "hello"
+Returns a string	Returns a string
+
+Important: Spaces and numbers remain unchanged.
+
+8. String trimming methods
+Trimming means removing whitespace from the beginning, ending, or both sides of a string.
+
+Whitespace includes spaces, tabs, and line breaks.
+15. trim()
+Purpose: Removes whitespace from both the beginning and the ending of a string.
+
+Syntax:
+string.trim();
+
+
+Parameters: None.
+
+Return value:
+- Returns a new string without surrounding whitespace.
+- Does not modify the original string.
+Example:
+let str = "   Hello World   ";
+
+let result = str.trim();
+
+console.log(result);
+
+
+Output:
+Hello World
+
+
+16. trimStart()
+Purpose: Removes whitespace only from the beginning of a string.
+
+Syntax:
+string.trimStart();
+
+
+Parameters: None.
+
+Return value:
+- Returns a new string without beginning whitespace.
+- Does not remove spaces from the end.
+Example:
+let str = "   Hello World   ";
+
+let result = str.trimStart();
+
+console.log(result);
+
+
+Output:
+Hello World   
+
+
+17. trimEnd()
+Purpose: Removes whitespace only from the ending of a string.
+
+Syntax:
+string.trimEnd();
+
+
+Parameters: None.
+
+Return value:
+- Returns a new string without ending whitespace.
+- Does not remove spaces from the beginning.
+Example:
+let str = "   Hello World   ";
+
+let result = str.trimEnd();
+
+console.log(result);
+
+
+Output:
+   Hello World
+
+
+Difference between trimming methods
+Method	Removes whitespace from
+trim()	Both sides
+trimStart()	Beginning only
+trimEnd()	Ending only
