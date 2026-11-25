@@ -1,0 +1,37 @@
+Method	                 |   Purpose	                  |   Return value
+
+--------------------------------------------------------------------------------
+at()	                 |   Access character by index	  |  String or undefined
+
+charAt()	             |   Access character by index	  |  String
+
+charCodeAt()	         |   Get character code	          |  Number or NaN
+
+concat()	             |   Combine strings	          |  String
+
+includes()	             |   Check whether text exists    |  Boolean
+
+indexOf()	             |   Find first occurrence        |  Number or -1
+
+lastIndexOf()	         |   Find last occurrence         |	Number or -1
+
+padStart()  	         |   Add padding at beginning     |	String
+
+padEnd()  	             |   Add padding at ending	      |  String
+
+repeat()  	             |   Repeat a string	          |  String
+
+startsWith()             |   Check beginning	          |  Boolean
+
+endsWith()	             |   Check ending	              |  Boolean
+
+toUpperCase()	         |   Convert to uppercase	      |  String
+
+toLowerCase()	         |   Convert to lowercase	      |  String
+
+trim()	Remove           |   spaces from both sides	      |  String
+
+trimStart()	             |   Remove beginning spaces      |	String
+
+trimEnd()	             |   Remove ending spaces	      |  String
+
